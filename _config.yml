@@ -1,0 +1,12 @@
+name: HackMoc Blog
+markdown: redcarpet
+pygments: true
+
+authors:
+    herberth:
+        display_name: Herberth Amaral
+        gravatar: e71567f551826c783efd8f91a577b43c
+        email: herberthamaral@gmail.com
+        web: http://herberthamaral.com/
+        twitter: herberthamaral 
+        github: herberthamaral
