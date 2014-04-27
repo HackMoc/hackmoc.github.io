@@ -44,7 +44,7 @@ linha sequer de código, mas já chego lá.
 No nosso final de tarde, do que foi hoje o mais longo dos Hackmocs da história, recebemos a
 visita de um novo membro, aproveito a ocasião para desejá-lo as boas vindas.
 
-E então finalmente começamos a códificar, mas só um pouco. Iniciamos o desenvolvivendo do 
+E então finalmente começamos a códificar, mas só um pouco. Iniciamos o desenvolvimento do
 `magro.py` em um arranjo completamente diferente com programação orientada a palpites. Um volante
 e outros 4 olhando e cada um dando sua opinião, em minha visão foi o melhor momento do dia,
 ter a possibilidade de acompanhar o raciocínio distinto de tantas pessoas e analisar as 
