@@ -1,4 +1,6 @@
 name: HackMoc Blog
+description: HackMoc Blog
+url: http://hackmoc.org/
 markdown: redcarpet
 pygments: true
 
