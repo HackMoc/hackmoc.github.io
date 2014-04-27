@@ -29,12 +29,12 @@ ninguém que ali não estivesse presente. Isso que eu chamo de diversão... mas 
 após muito descrever como tudo funcionaria, sim no subjuntivo, algumas coisas começaram
 a não funcionar. O primeiro foi nosso modelo de persistência de dados, descobrimos que o
 [CouchDB][couchdb] não se encaixava bem (nada contra o mesmo, de fato gostei muito da idéia) 
-e concluímos que para o nosso mirror precisavamos de algo relacional, foi então que fechamos 
+e concluímos que para o nosso mirror precisávamos de algo relacional, foi então que fechamos 
 com o [Dataset][dataset] e o Postgres.
 
 Como ninguém é de ferro, fizemos aquela pausa para o almoço, algo bem leve, uma
 feijoada e meia com aquela cerveja gelada para acompanhar. Passado esse momento
-de sacrifício voltamos a frente dos computadores e dalhe códigos!
+de sacrifício voltamos a frente dos computadores e dá-lhe códigos!
 
 Tudo ia muito bem até algo inédito acontecer na cidade: chuva! E não foi pouca água, não.
 Dentro de minutos a copa de onde estávamos já estava toda encharcada e tivemos que 
@@ -44,7 +44,7 @@ linha sequer de código, mas já chego lá.
 No nosso final de tarde, do que foi hoje o mais longo dos Hackmocs da história, recebemos a
 visita de um novo membro, aproveito a ocasião para desejá-lo as boas vindas.
 
-E então finalmente começamos a códificar, mas só um pouco. Iniciamos o desenvolvimento do
+E então finalmente começamos a codificar, mas só um pouco. Iniciamos o desenvolvimento do 
 `magro.py` em um arranjo completamente diferente com programação orientada a palpites. Um volante
 e outros 4 olhando e cada um dando sua opinião, em minha visão foi o melhor momento do dia,
 ter a possibilidade de acompanhar o raciocínio distinto de tantas pessoas e analisar as 
