@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "HackMoc 06/05/2015"
+date:   2015-06-07 08:00:10
+author: esteban
+categories: blog
+---
+
+Essa foi a primeira vez que participei do HackMoc, achei muito interessante a proposta de trabalhar em dupla e a dinâmica de aprendizado. A reunião marcou o início de uma nova abordagem sobre os temas tratados no hack, conforme proposto pelo Herberth e o Bodock, a partir de agora o objetivo é escolher um tema e trabalhar com ele até que o assunto esteja esgotado.
+No primeiro momento da reunião escolhemos o tema, que foi Criptografia, sugerido pelo Herberth, posteriormente formamos as seguintes duplas, Gustavo e Herberth, Pedro e Bodock, Tonim e Léo, que escolheram respectivamente as linguagens: Julia, Scala, e Erlang.
+Para iniciar os trabalhos foi proposto um algoritmo de criptografia de chave simétrica simples, baseado em permutação. 
+A ideia é que cada equipe desenvolva uma aplicação capaz de comunicar com as aplicações das outras equipes usando a chave simétrica. Para isso após a escolha do tema e das linguagens começamos a codificar os algoritmos de encriptação e decriptação, cada dupla começou a estudar a linguagem escolhida e o algoritmo de chave simétrica baseado em permutação. 
+Ressalto que, o algoritmo de chave simétrica baseado em permutação é de fácil compreensão, todavia, a maior dificuldade encontrada foi nas linguagens Scala e Erlang, pois apresentavam algumas peculiaridades que dificultaram a implementação.
+Esse foi um breve resumo do que aconteceu no HackMoc do dia 06/06/2015, como não fiquei até o fim, e sendo principiante, fui escolhido em um sorteio “justo”, do qual não estava presente, a fazer o resumo do acontecido.
