@@ -14,14 +14,17 @@ Atualmente tenho servidores com discos que somam 12 TB e, por isso, preciso de u
 
 O primeiro passo é a contratação do storage box da Hetzner, que pode ser feito diretamente pelo site. Após a sua ativação, podemos acessá-lo via compartilhamento do Windows (CIFS) ou FTP. Nesse caso, será utilizado o CIFS em um servidor Linux. Para tal, basta utilizar o comando mount.cifs, da seguinte maneira:
 
-        mount.cifs //<id>.your-storagebox.de/backup <diretorio-de-destino> -o user=<id>,pass=<senha>
+        mount.cifs //<id>.your-storagebox.de/backup \
+                   <diretorio-de-destino> \
+                   -o user=<id>,pass=<senha>
 
 Pronto! O storage box está disponível no diretório escolhido e já pode ser utilizado. O id e a senha são fornecidos pelo datacenter, bastando apenas configurar uma senha forte para evitar ataques de força bruta.
 
 O próximo passo é configurar o Attic, o que é extremamente simples. Após a instalação, é necessário apenas iniciar o repositório e criar o primeiro backup:
 
         attic init <diretoriodebackup/repositorio.attic>
-        attic create <diretoriodebackup/repositorio.attic>::<nome-do-backup> <arquivos-e-diretorios-para-backup>
+        attic create <diretoriodebackup/repositorio.attic>::<nome-do-backup> \
+                     <arquivos-e-diretorios-para-backup>
 
 Vale ressaltar que o nome do backup pode ser escolhido no momento da criação, mas recomenda-se utilizar algo que seja representativo, como a data e o horário do backup.
 
@@ -48,7 +51,8 @@ Para simplificar e automatizar todo o processo, um simples shell script pode aju
         }
         
         if checkmount; then
-            mount.cifs $STORAGEBOXADDRESS $CIFSMOUNT -o $STORAGEBOXADDRESSOPTIONS
+            mount.cifs $STORAGEBOXADDRESS $CIFSMOUNT \
+                       -o $STORAGEBOXADDRESSOPTIONS
             if checkmount; then
                 echo "ERROR: CIFS not mounted"
                 exit 1
@@ -56,8 +60,12 @@ Para simplificar e automatizar todo o processo, um simples shell script pode aju
         fi
         
         attic create --stats $BACKUPDIR::$(date +%Y-%m-%d) ${BACKUPFILES}
-        attic prune -v $BACKUPDIR --keep-daily=$DAILY --keep-weekly=$WEEKLY --keep-monthly=$MONTHLY
-        rsync -rlptDv --del $BACKUPDIR/ $CIFSMOUNT/backup/backup.attic/
+        attic prune -v $BACKUPDIR \
+                    --keep-daily=$DAILY \
+                    --keep-weekly=$WEEKLY \
+                    --keep-monthly=$MONTHLY
+        rsync -rlptDv --del $BACKUPDIR/ \
+              $CIFSMOUNT/backup/backup.attic/
         umount -v $CIFSMOUNT
 
 Além de criar os backups, o script acima faz a sincronização com o storage box e apaga os backups antigos. Ao final da execução, ele ainda desmonta o storage box, para evitar algum acesso indevido aos arquivos.
